@@ -18,6 +18,8 @@ public class Ex1 {
         Cliente cliente1 = new PessoaFisica("234.234.234-23");
         cliente1.setNome("Paulo");
         ((PessoaFisica) cliente1).getCpf(); // cast de tipo
+        // nao pode pois o objeto foi instanciado como PF
+        // ((PessoaJuridica) cliente1).getCnpj();
 
         PessoaFisica p2 = ((PessoaFisica) cliente1);
         System.out.println("cpf: " + p2.getCpf());
