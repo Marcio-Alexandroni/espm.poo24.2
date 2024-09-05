@@ -13,4 +13,9 @@ public class PessoaJuridica extends Cliente {
         return cnpj;
     }
     
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj) & (obj instanceof PessoaJuridica);
+    }
+
 }
