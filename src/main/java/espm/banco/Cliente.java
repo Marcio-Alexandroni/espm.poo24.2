@@ -6,7 +6,7 @@ public abstract class Cliente {
 
     // cria um identificado unico e atribui ao atributo id,
     // final nao permite que ninguem mais altere seu conteudo
-    final private String id;
+    private String id;
 
     private String nome;
 
@@ -31,6 +31,10 @@ public abstract class Cliente {
         this.nome = nome;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "[" + id + "] " + nome;
@@ -42,11 +46,10 @@ public abstract class Cliente {
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         return obj != null
             && (obj instanceof Cliente)
             && ((Cliente) obj).id.equals(this.id);
     }
-
 
 }
