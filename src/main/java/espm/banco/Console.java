@@ -20,7 +20,6 @@ public class Console{
             else if (linha.equals("2")) insertCostumer();
             else if (linha.length() == 0) continue;
             else System.err.println("Comando Inválido");
-            return;
         }
 
         System.out.println("Até logo!");
@@ -48,7 +47,7 @@ public class Console{
 
 
     private static void insertCostumer(){
-        System.out.println("Tipo: [F | J]");
+        System.out.println("Tipo: [f/j]");
         boolean isFisica = entrada.nextLine().trim().equalsIgnoreCase("f");
         final Cliente cliente;
         System.out.println("Nome: ");
