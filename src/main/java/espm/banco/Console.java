@@ -43,7 +43,6 @@ public class Console{
     private static void listCostumers() {
         banco.getClientes().forEach(cliente -> {
             System.out.println(cliente);
-
         });
     }
 
